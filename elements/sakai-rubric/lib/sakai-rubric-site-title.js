@@ -8,7 +8,6 @@ import { html } from "lit-element/lit-element.js";
  * `sakai-rubric-site-title`
  *
  * @microcopy - language worth noting:
- *  - This element assumes an end point in `baseapiurl`
  *
  * @customElement
  * @litElement
@@ -18,7 +17,6 @@ import { html } from "lit-element/lit-element.js";
 export class SakaiRubricSiteTitle extends SakaiElement {
   constructor() {
     super();
-    this.baseapiurl = "/";
     this.siteId = "";
     this.siteTitle = "";
   }
@@ -49,7 +47,6 @@ export class SakaiRubricSiteTitle extends SakaiElement {
     jQuery
       .ajax({
         url:
-          this.baseapiurl +
           "sakai-ws/rest/sakai/getSiteTitle?sessionid=" +
           sakaiSessionId +
           "&siteid=" +
